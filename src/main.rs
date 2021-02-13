@@ -98,7 +98,7 @@ fn roll(dice_roll: &DiceRoll) -> Vec<u8> {
     let mut roll_values: Vec<u8> = Vec::new();
 
     for _ in 0..dice_roll.n_times {
-        let roll_value = rand::thread_rng().gen_range(1, dice_roll.sides);
+        let roll_value = rand::thread_rng().gen_range(1, dice_roll.sides + 1);
         roll_values.push(roll_value);
     }
     println!("\nRolled {}d{}:", dice_roll.n_times, dice_roll.sides);
